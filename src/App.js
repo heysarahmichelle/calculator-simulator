@@ -1,24 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import Number from "./components/Number/Number";
+import Operator from './components/Operator/Operator';
 
 function App() {
+  let mappedNumbers = [];
+    for(let i = 1; i < 10; i ++) {
+      mappedNumbers.push(<Number number={i} />)
+    }
+
+  let operatorArr = ["/","*","-","+","="]
+  let mappedOperators = operatorArr.map(op => {
+    return <Operator operator={op} />;
+  });
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="text-display">
+        Text
+      </div>
+      <div className="operation-display">
+        <div className="number-display">{mappedNumbers}</div>
+  <div className="operator-display">{mappedOperators}</div>
+
+      </div>
     </div>
   );
 }

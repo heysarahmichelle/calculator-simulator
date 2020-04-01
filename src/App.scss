@@ -1,0 +1,35 @@
+.App {
+  width: 300px;
+  height: 500px;
+  color: white;
+  background-color: rgb(22, 22, 22);
+
+  .text-display {
+    height: 40%;
+    width: 100%;
+    background-color: rgb(22, 22, 22);
+    color: white;
+  }
+  .operation-display {
+    height: 60%;
+    width: 100%;
+    background-color:  rgb(22, 22, 22);
+    color: white;
+    display: flex;
+    .number-display {
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      width: 225px;
+      height: 225px;
+    }
+    .operator-display {
+      display: flex;
+      justify-content: space-evenly;
+      flex-direction: column;
+      align-items: flex-end;
+      width: 75px;
+    }
+  }
+
+}
